@@ -566,6 +566,7 @@ h1 {
 }
 
 .wrapper,
-section {
+section,
+main {
     overflow:hidden;
 }
