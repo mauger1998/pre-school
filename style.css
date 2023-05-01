@@ -518,10 +518,13 @@ h1 {
     .stickman:nth-child(1) {
         width:65px;
         top:2%;
+        
     }
     .stickman:nth-child(3) {
         width:60px !important;
         left:-2%;
+        top:75%;
+
     }
     
 }
