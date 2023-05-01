@@ -564,3 +564,8 @@ h1 {
         flex-direction: column;
     }
 }
+
+.wrapper,
+section {
+    overflow:hidden;
+}
