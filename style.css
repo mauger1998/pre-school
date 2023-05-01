@@ -32,25 +32,27 @@ main {
     max-width:1440px;
 }
 button {
-    background-color:transparent;
     border:none;
     text-decoration: underline;
+    background-color: transparent;
     font-weight:700;
     color:white;
     display:flex;
     align-items: center;
     justify-content: flex-start;
     gap:1rem;
-    cursor:pointer;
+    cursor:pointer !important;
+    z-index:100000000000 !important;
 }
 button span {
     background-color:var(--purple);
-    border-radius:100rem;
+    border-radius:10rem;
     display:flex;
     align-items: center;
     justify-content: center;
     padding:1rem;
 }
+
 .main-bottom-buttons button span {
     aspect-ratio:1/1 !important;
 }
@@ -62,13 +64,18 @@ button span img {
 }
 main .wrapper {
     position: relative;
+    z-index:100000 !important;
 }
 
 body {
     background-color:var(--background-pink);
 }
 .logo {
-    width:150px;
+    width:75px;
+}
+.planet {
+    position:absolute;
+    width:75px;
 }
 /** **/
 
@@ -78,7 +85,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding:2rem 6rem;
+    padding:0.5rem 6rem;
 }
 .header-wrapper p {
     font-weight:700;
@@ -227,12 +234,7 @@ main .wrapper {
 
 
 /* Stickmen */
-main {
-    position:relative;
-}
-main .wrapper {
-    position:static;
-}
+
 .stickman {
     position:absolute;
     width:150px;
@@ -264,7 +266,13 @@ main .wrapper {
 
     
 }
-
+.main-left-column-top {
+    position:relative;
+}
+.planet {
+    top:7%;
+    right:12%;
+}
 
 
 /* Stickman Animations */
@@ -309,14 +317,14 @@ main .wrapper {
 }
 .stickman:nth-of-type(4) {
     transform:translateX(-50%) rotateZ(-0deg) translateY(-80%);
-    animation: slide-down 750ms forwards ease;
+    animation: slide-down 750ms forwards ease !important;
     animation-delay:400ms;
     top:-22%;
 
 }
 .stickman:nth-of-type(2) {
     transform:translateY(-50%) rotateZ(50deg) translateX(50%);
-    animation: two-slide 750ms forwards ease ;
+    animation: two-slide 750ms forwards ease;
     animation-delay:500ms;
 }
 @keyframes two-slide {
@@ -349,7 +357,7 @@ main .wrapper {
         transform:translateX(-50%) rotateZ(-0deg) translateY(-80%);
     }
     to {
-        transform:translateX(-50%) rotateZ(-0deg);
+        transform:translateX(-50%) rotateZ(0deg);
     }
 }
 
@@ -406,6 +414,9 @@ h1 {
         align-items: center;
         justify-content: center;
     }
+    .planet {
+        right:-0%;
+    }
     h1 {
         text-align:center !important;
         max-width:10ch;
@@ -426,6 +437,7 @@ h1 {
     .images .wrapper {
         padding-inline:4rem;
     }
+    
 }
 @media (max-width:700px) {
     main .wrapper,
@@ -445,6 +457,9 @@ h1 {
     .main-left-column > p {
         max-width:45ch;
     }
+    .logo {
+        width:60px;
+    }
 }
 @media (max-width:664px) {
     .stickman:nth-child(4) {
@@ -455,10 +470,14 @@ h1 {
         right:-4% !important;
     }
 }
-@media (max-width:502px) {
-    .stickman:nth-child(4) {
-        display:none;
+@media (max-width:611px) {
+    .planet {
+        top:-8%;
     }
+   
+}
+@media (max-width:502px) {
+    
     .stickman:nth-child(2) {
         top:20% !important;
         right:-4% !important;
@@ -470,6 +489,9 @@ h1 {
     .stickman:nth-child(3) {
         width:60px !important;
         left:-2%;
+    }
+    .planet {
+        width:50px;
     }
 }
 @media (max-width:500px) {
@@ -515,10 +537,16 @@ h1 {
         right:-4% !important;
         width:75px;
     }
+    main .wrapper {
+        padding-block:6rem;
+    }
     .stickman:nth-child(1) {
         width:65px;
         top:2%;
         
+    }
+    .planet {
+        display:none;
     }
     .stickman:nth-child(3) {
         width:60px !important;
@@ -570,3 +598,11 @@ section,
 main {
     overflow:hidden;
 }
+input:focus,
+textarea:focus {
+    border:2px solid var(--purple);
+    outline:none;
+    border-radius:0.25rem;
+}
+
+
