@@ -478,6 +478,7 @@ main .wrapper {
     transform:translateX(-50%) rotateZ(-0deg) translateY(-80%);
     animation: slide-down 750ms forwards ease;
     animation-delay:400ms;
+    top:-22%;
 
 }
 .stickman:nth-of-type(2) {
