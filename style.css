@@ -209,15 +209,16 @@ button {
     gap:2rem;
     place-content:center;
     place-items:center;
+    padding-top:0;
+}
+main .wrapper {
+    padding-bottom:2rem;
 }
 .images img {
    width:100%;
+   object-fit:fill;
 }
-.images img:nth-child(3),
-.images img:nth-child(4) {
-    width:130%;
-    
-}
+
 .buttons {
     display:flex;
     align-items: center;
@@ -292,12 +293,14 @@ main .wrapper {
 }
 @media (max-width:900px) {
     main .wrapper,
-    .header-wrapper {
+    .header-wrapper,
+    .images .wrapper {
         padding-inline:4rem;
     }
 }
 @media (max-width:700px) {
-    main .wrapper {
+    main .wrapper,
+    .images .wrapper {
         padding-inline:2rem !important;
     }
     .header-wrapper {
@@ -341,7 +344,8 @@ main .wrapper {
     }
 }
 @media (max-width:500px) {
-    main .wrapper {
+    main .wrapper,
+    .images .wrapper {
         padding-inline:1rem !important;
     }
     .header-wrapper {
