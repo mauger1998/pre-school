@@ -1,7 +1,7 @@
 :root {
     --background-pink:#F17FB2;
     --purple:#670069;
-    --heading-one:100px;
+    --heading-one:90px;
     --mobile-heading-one:75px;
     --tag:22px;
     --mobile-tag:16px;
@@ -162,15 +162,16 @@ main .wrapper {
     display:flex;
     align-items: flex-end;
     justify-content: space-between;
+    gap:2rem;
 }
 .main-bottom h1 {
     color:var(--purple);
     font-size:var(--heading-one);
     line-height:1;
-    max-width:50%;
+    max-width:8ch;
 }
 .main-bottom p {
-    max-width:65ch;
+    max-width:50ch;
     margin-bottom:0.5rem;
     font-size:var(--text) !important;
 }
@@ -333,13 +334,14 @@ main .wrapper {
 .first-card-section h2 {
     color:var(--background-pink);
     font-size:var(--heading-two);
-    max-width:30%;
+    max-width:10ch;
     line-height:1;
 }
 .first-card p:nth-of-type(1) {
     color:var(--background-pink);
     font-size:var(--card-heading);
     font-weight:500;
+    line-height:1.1;
 }
 .first-card-top p {
     max-width:50%;
@@ -360,6 +362,61 @@ main .wrapper {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:2rem;
+}
+@media (max-width:1150px) {
+    .first-card-bottom {
+        grid-template-columns:1fr;
+    }
+    .first-card-section .wrapper {
+        padding-inline:4rem;
+    }
+}
+@media(max-width:1000px) {
+    .first-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap:2rem;
+    }
+    .first-card-top h2 {
+        max-width:15ch;
+    }
+    .first-card-top p {
+        max-width:80ch;
+    }
+}
+@media (max-width:700px) {
+    .first-card-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:500px) {
+    .first-card-section .wrapper {
+        padding-inline:1rem;
+    }
+    .first-card-top h2 {
+        max-width:15ch;
+        font-size:var(--mobile-heading-two);
+    }
+    .first-card {
+        gap:1rem;
+        padding:1.5rem;
+    }
+    .first-card img {
+        width:50px;
+    }
+    .first-card span img {
+        width:auto;
+    }
+    .first-card-top p {
+        max-width:80ch;
+        font-size:var(--mobile-text);
+    }
+    .first-card p:nth-of-type(1) {
+        font-size:var(--mobile-card-heading);
+    }
+    .first-card p:nth-of-type(2) {
+        font-size:var(--mobile-text);
+    }
 }
 
 /* Second */
@@ -470,6 +527,59 @@ main .wrapper {
     background-color:var(--purple);
     opacity:0.5;
 }
+/* Contact */
+.contact-section h2 {
+    max-width:17ch;
+}
+label {
+    font-weight:500;
+}
+.contact-section .complex-card {
+    height:500px !important;
+    width:350px;
+    padding-block:2rem;
+}
+.contact-section .complex-grid-right {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+    position:absolute;
+    right:-10rem;
+    transform:rotateZ(2.5deg);
+    z-index:0;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+    gap:0.5rem;
+}
+
+
+form span {
+    scale:2;
+    margin-right:2rem;
+    background-color:var(--background-pink);
+}
+form button {
+    margin-top:1.5rem;
+}
+input,
+textarea {
+    padding:0.25rem;
+    width:100%;
+    border-radius:0.5rem;
+    border:1px solid var(--purple)
+}
+fieldset {
+    border:none;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0.5rem;
+}
 
 /* Team grid */
 
@@ -514,4 +624,53 @@ main .wrapper {
     flex-direction: column;
     gap:3rem;
     font-size:20px;
+}
+
+/* Footer */
+
+footer .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    padding-bottom:2rem;
+}
+.footer-logo {
+    width:30%;
+}
+.footer-bottom {
+    border-top:1px solid black;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:4rem;
+}
+.footer-top ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    justify-content: center;
+    width:40%;
+}
+.social-icons {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:2rem;
+    width:30%;
+}
+
+.footer-top {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-top img:nth-child(1) {
+    width:100px;
+}
+.social-icons img {
+    width:25px !important;
 }
