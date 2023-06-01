@@ -194,7 +194,7 @@ main .wrapper {
     color:var(--purple);
 }
 .why-us-section .column:nth-of-type(1) img {
-    width:200%;
+    width:600px;
     position:absolute;
     /* top:-120%; */
     left:-60%;
@@ -237,6 +237,60 @@ main .wrapper {
 
 }
 
+@media (max-width:1152px) {
+    .why-us-section .four-column-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .column:nth-of-type(1) {
+        grid-row:2;
+        grid-column:2;
+    }
+    .why-us-section .column:nth-of-type(1) img {
+        position:static;
+        width:80%;
+    }
+    .why-us-section .wrapper {
+        padding-bottom:0;
+    }
+    .title {
+        margin-left:0;
+    }
+}
+@media (max-width:831px) {
+    .why-us-section .four-column-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-us-section .column:nth-of-type(1) img {
+        position:static;
+        width:100%;
+    }
+    .column:nth-of-type(1) {
+        grid-row:4;
+        grid-column:1;
+    }
+}
+@media (max-width:700px) {
+    .why-us-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:600px) {
+    .why-us-section h2 {
+        font-size:var(--mobile-heading-twp)
+    }
+    .why-us-section .column p:nth-of-type(1) {
+        font-size:var(--mobile-card-heading);
+    }
+    .why-us-section .column p:nth-of-type(2) {
+        font-size:var(--mobile-text);
+    }
+}
+@media (max-width:500px) {
+    .why-us-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+
 /* Doctor */
 
 .doctor-section {
@@ -261,6 +315,7 @@ main .wrapper {
 .doctor-left {
     width:50%;
     padding-inline:4rem;
+    padding-right:0;
 }
 .doctor-right {
     width:50%;
@@ -289,6 +344,44 @@ main .wrapper {
 .doctor-list-item p {
     font-weight:700;
     font-size:var(--card-heading);
+}
+@media (max-width:1227px) {
+    .doctor-section .wrapper {
+        flex-direction: column;
+    }
+    .doctor-left,
+    .doctor-right {
+        width:100%;
+    }
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:4rem;
+    }
+}
+
+@media (max-width:700px) {
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:2rem;
+        padding-inline:2rem;
+    }
+}
+@media (max-width:600px) {
+    .doctor-section h2 {
+        font-size:var(--mobile-heading-twp);
+    }
+    .doctor-list-item p {
+        font-weight:700;
+        font-size:var(--mobile-card-heading);
+    }
+    
+}
+@media (max-width:500px) {
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:1rem;
+        padding-inline:1rem;
+    }
 }
 
 /* Puppet */
