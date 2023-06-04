@@ -1,0 +1,434 @@
+:root {
+    --purple:#7053BF;
+    --heading-one:100px;
+    --mobile-heading-one:75px;
+    --heading-two:40px;
+    --mobile-heading-twp:25px;
+    --text:18px;
+    --mobile-text:16px;
+    --card-heading:22px;
+    --mobile-card-heading:20px;
+   
+}
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;}
+section,
+header,
+footer,
+main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.wrapper {
+    padding:6rem 4rem;
+    width:100%;
+    max-width:1440px;
+}
+button {
+    border:2px solid white;
+    border-radius:10rem;
+    font-weight:700;
+    font-size:var(--text);
+    color:white;
+    cursor:pointer;
+    transition:500ms;
+    padding:0.75rem 2rem;
+    background-color:transparent;
+}
+
+img {
+    width:100%;
+}
+a {
+    color:white;
+    cursor:pointer;
+    text-decoration: none;
+}
+ul {
+    list-style:none;
+}
+p {
+    line-height:1.75;
+    font-weight:300;
+    font-size:var(--text);
+    color:white;
+}
+h2 {
+    line-height:1.2;
+    font-size:var(--heading-two);
+}
+h1 {
+    font-size:var(--heading-one);
+    line-height:1;
+    color:white;
+    font-weight:700;
+}
+
+/* Header */
+header {
+    position:fixed;
+    z-index:10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.header-wrapper {
+    padding:1rem 4rem;
+    width:100%;
+    max-width:1440px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    justify-content: flex-end;
+}
+nav {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+nav ul li {
+    color:white;
+    font-weight:500;
+    font-size:var(--text);
+    text-transform:normal ;
+}
+@media (max-width:1050px) {
+    nav {
+        display:none;
+    }
+}
+
+/* Main */
+
+main {
+    background-image: linear-gradient(#00000070, #00000070), url(../pre-school-about-photos/0022-STMARTINSPRESCHOOL2.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+main .wrapper {
+    padding-top:36rem;
+    display:flex;
+    align-items: flex-end;
+    gap:2rem;
+}
+.main-left {
+    width:50%;
+}
+.main-right {
+    width:50%;
+}
+@media (max-width:1167px) {
+    main .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-left {
+        width:100%;
+    }
+    .main-right {
+        width:100%;
+    }
+    main h1 {
+        max-width:8ch;
+    }
+    main p {
+        max-width:50ch;
+    }
+}
+
+@media (max-width:700px) {
+    main .wrapper {
+        padding-inline:2rem;
+    }
+    .header-wrapper {
+        padding-inline:2rem;
+    }
+    main .wrapper {
+        padding-top:30rem !important;
+    }
+}
+@media (max-width:600px) {
+    main h1 {
+        font-size:var(--mobile-heading-one);
+    }
+    main p {
+        font-size:var(--mobile-text);
+    }
+}
+@media (max-width:500px) {
+    main .wrapper {
+        padding-inline:1rem;
+    }
+    .header-wrapper {
+        padding-inline:1rem;
+    }
+    
+}
+@Media(max-width:422px) {
+    main h1 {
+        font-size:60px;
+    }
+    
+}
+
+/* Doctor Playing */
+
+.doctor-section {
+    background-color:var(--purple);
+}
+.doctor-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+    padding-inline:0;
+    padding-block:0;
+}
+
+
+.doctor-list-item img {
+    width:50px;
+}
+
+.doctor-section h2 {
+    color:white;
+}
+.doctor-left {
+    width:50%;
+    padding-inline:4rem;
+    padding-right:0;
+}
+.doctor-right {
+    width:50%;
+}
+.doctor-right img {
+    height:100%;
+    object-fit:cover;
+}
+.doctor-left {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.doctor-list {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.doctor-list-item {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+.doctor-list-item p {
+    font-weight:700;
+    font-size:var(--card-heading);
+}
+@media (max-width:1227px) {
+    .doctor-section .wrapper {
+        flex-direction: column;
+    }
+    .doctor-left,
+    .doctor-right {
+        width:100%;
+    }
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:4rem;
+    }
+}
+
+@media (max-width:700px) {
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:2rem;
+        padding-inline:2rem;
+    }
+}
+@media (max-width:600px) {
+    .doctor-section h2 {
+        font-size:var(--mobile-heading-twp);
+    }
+    .doctor-list-item p {
+        font-weight:700;
+        font-size:var(--mobile-card-heading);
+    }
+    
+}
+@media (max-width:500px) {
+    .doctor-left {
+        padding-block:6rem;
+        padding-right:1rem;
+        padding-inline:1rem;
+    }
+}
+/* Why Twins */
+.why-us-section p {
+    color:black;
+}
+
+.why-us-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:4rem;
+    padding-bottom:6rem;
+}
+.title {
+    margin-left:calc(1440px / 4.25)
+}
+.title h2 {
+    color:var(--purple);
+}
+.why-us-section .column:nth-of-type(1) img {
+    width:1100px;
+    position:absolute;
+    /* top:-98%; */
+    left:-70%;
+    bottom:-6rem;
+    z-index:-1;
+}
+.why-us-section .column:nth-of-type(1) {
+    position:relative;
+}
+.why-us-section .column img {
+    width:100%;
+}
+.why-us-section .four-column-grid {
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap:2rem;
+    position:relative;
+    z-index:10;
+}
+.why-us-section .column {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+}
+.why-us-section .column p:nth-of-type(1) {
+    font-weight:700;
+    font-size:var(--card-heading);
+}
+.why-us-section button {
+    border:2px solid var(--purple);
+    border-radius:10rem;
+    font-weight:700;
+    font-size:var(--text);
+    color:var(--purple);
+    cursor:pointer;
+    transition:500ms;
+    padding:0.75rem 2rem;
+    background-color:transparent;
+
+}
+
+@media (max-width:1152px) {
+    .why-us-section .four-column-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .column:nth-of-type(1) {
+        grid-row:2;
+        grid-column:2;
+    }
+    .why-us-section .column:nth-of-type(1) img {
+        position:static;
+        width:200%;
+        margin:0;
+        margin-left:-8rem;
+    }
+    .why-us-section .wrapper {
+        padding-bottom:0;
+    }
+    .title {
+        margin-left:0;
+    }
+}
+@media (max-width:831px) {
+    .why-us-section .four-column-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-us-section .column:nth-of-type(1) img {
+        position:static;
+        width:100%;
+    }
+    .column:nth-of-type(1) {
+        grid-row:4;
+        grid-column:1;
+    }
+}
+@media (max-width:700px) {
+    .why-us-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:600px) {
+    .why-us-section h2 {
+        font-size:var(--mobile-heading-twp)
+    }
+    .why-us-section .column p:nth-of-type(1) {
+        font-size:var(--mobile-card-heading);
+    }
+    .why-us-section .column p:nth-of-type(2) {
+        font-size:var(--mobile-text);
+    }
+}
+@media (max-width:500px) {
+    .why-us-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+/* CTA */
+
+.cta-section {
+    background-image:url(../pre-school-home-photos/Group78.png);
+    background-size:cover;
+}
+.cta-section h2 {
+    color:white;
+    font-size:60px;
+    max-width:20ch;
+    text-align:center;
+    line-height:1;
+}
+.cta-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block:18rem;
+    gap:2rem;
+}
+
+@media(max-width:700px) {
+    .cta-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media(max-width:600px) {
+    .cta-section h2 {
+        font-size:40px;
+    }
+}
+
+@media(max-width:500px) {
+    .cta-section .wrapper {
+        padding-inline:1rem;
+    }
+}
