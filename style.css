@@ -75,7 +75,7 @@ h1 {
 /* Header */
 header {
     position:fixed;
-    z-index:10;
+    z-index:1000 !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
