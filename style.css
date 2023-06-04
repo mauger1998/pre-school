@@ -71,6 +71,101 @@ h1 {
     color:white;
     font-weight:700;
 }
+/****** Dropdown ******/
+
+.dropdown {
+    position:relative !important;
+    display:none;
+    z-index:1000 !important;
+}
+.dropdown-menu {
+    position:absolute;
+    right:0;
+    top:calc(100% + 0.5rem);
+    padding:1.5rem;
+    background-color:var(--purple);
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    width:max-content;
+    opacity:0;
+    transform:translateY(-1rem);
+    transition:opacity 0.5s, transform 0.5s;
+    pointer-events:none;
+    gap:2rem;
+    border-radius:0.5rem;
+   
+}
+
+
+
+
+
+.dropdown-heading > a {
+    font-weight:700 !important;
+}
+.dropdown-links {
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.dropdown-links a {
+    font-weight:300 !important;
+}
+.div {
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.menu {
+    width:50px;
+    display:none;
+    cursor:pointer;
+}
+.dropdown.active > .link + .dropdown-menu {
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:all;
+    transition:opacity 0.5s, transform 0.5s;
+
+}
+.menu + .dropdown-menu {
+    padding-block:2rem;
+    display:none;
+}
+.dropdown-heading > p {
+    font-weight:700 !important;
+}
+.dropdown > a {
+    font-weight:300 !important;
+}
+@media (max-width:1167px) {
+    nav ul {
+        display:none;
+    }
+    .dropdown {
+        display:block;
+    }
+    .menu + .dropdown-menu {
+        padding-block:2rem;
+        display:grid;
+    }
+    .menu {
+        display:block;
+    }
+    nav {
+        display:flex;
+        justify-content: flex-end;
+    }
+}
+@media (max-width:500px) {
+    .header-wrapper {
+        padding-inline:1rem;
+    }
+    .dropdown-menu {
+        grid-template-columns:1fr;
+    }
+}
 
 /* Header */
 header {
@@ -104,7 +199,7 @@ nav ul li {
     font-size:var(--text);
     text-transform:normal ;
 }
-@media (max-width:1050px) {
+@media (max-width:1167px) {
     nav {
         display:none;
     }
@@ -331,6 +426,8 @@ main .wrapper {
 .doctor-right img {
     height:100%;
     object-fit:cover;
+    margin-bottom:-0.4rem;
+    margin-top:-0.1rem;
 }
 .doctor-left {
     display:flex;
@@ -399,6 +496,8 @@ main .wrapper {
     align-items: center;
     gap:4rem;
     padding-block:0;
+}
+.puppet-section {
     overflow:hidden;
 }
 .puppet-section h2 {
@@ -407,6 +506,10 @@ main .wrapper {
 .puppet-section p {
     color:black;
     max-width:55ch;
+}
+.bike-section img {
+    margin-bottom:-0.5rem;
+    margin-top:-0.15rem;
 }
 .puppet-section button {
     border:2px solid var(--purple);
@@ -420,6 +523,9 @@ main .wrapper {
    width:150%;
    margin-top:-8rem;
    margin-left:-4rem;
+   z-index:10;
+   position:relative;
+   margin-bottom:-0.5rem;
 }
 .puppet-left {
     display:flex;
@@ -531,6 +637,7 @@ main .wrapper {
     width:calc(100% + 4rem);
     margin-left:-4rem;
     object-fit:cover;
+    margin-bottom:-0.4rem;
 }
 @media (max-width:1227px) {
     .trusted-top {
