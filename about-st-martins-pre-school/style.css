@@ -686,21 +686,13 @@ strong {
         align-items: flex-start;
         gap:1rem;
     }
-    .child-kerrie-image {
+    .debs-image,
+    .vikki-image,
+    .emma-image,
+    .doogle-image {
         grid-row:1;
     }
-    .child-emma-image {
-        grid-row:1;
-    }
-    .child-hayley-image {
-        grid-row:1;
-    }
-    .child-kerrie-image {
-        grid-row:1;
-    }
-    .child-doogle-item {
-        grid-row:1;
-    }
+    
 }
 @media (max-width:700px) {
     .team-section .wrapper {
