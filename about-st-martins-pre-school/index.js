@@ -16,7 +16,7 @@ document.addEventListener("click", (e) => {
 
 // CMS
 
-let URL = "https://0pxy7jkz.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20'teamMembers'%5D%20%7C%20order(order)%20%7B%0A%20%20%20%20name%2C%0A%20%20%20%20%20%20favouriteFood%2C%0A%20%20%20%20%20%20favouriteColour%2C%0A%20%20%20%20%20%20pet%2C%0A%20%20%20%20%20%20text%2C%0A%20%20%20%20%22imageUrl%22%3A%20photo.asset-%3Eurl%0A%7D%20%0A%20" 
+let URL = "https://0pxy7jkz.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20'teamMembers'%5D%20%7C%20order(order)%20%7B%0A%20%20name%2C%0A%20%20%20%20title%2C%0A%20%20%20%20favouriteFood%2C%0A%20%20%20%20favouriteColour%2C%0A%20%20%20%20pet%2C%0A%20%20%20%20text%2C%0A%20%20%20%20%22imageUrl%22%3A%20photo.asset-%3Eurl%0A%7D%20" 
 
 fetch(URL)
 .then((res) => res.json())
@@ -46,6 +46,10 @@ fetch(URL)
         const name = document.createElement("p")
         teamGridItemChildText.appendChild(name)
         name.textContent = result.name
+
+        const title = document.createElement("p")
+        title.textContent = result.title
+        teamGridItemChildText.appendChild(title)
 
         const favouriteFood = document.createElement("p")
         favouriteFood.textContent = `Favourite Food: ${result.favouriteFood}`
