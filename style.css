@@ -903,13 +903,9 @@ footer p {
 }
 @Media (max-width:700px) {
     .new-hour-section .wrapper {
-        padding-inline:4rem;
+        padding-inline:2rem;
     }
-    .new-hour-left img {
-        width:calc(100% + 2rem);
-        margin-left:-2rem;
-        margin-bottom:-0.4rem;
-    }
+   
     .new-hour-left img {
         width:calc(100% + 4rem);
         margin-left:-2rem;
