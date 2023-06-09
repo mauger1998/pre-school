@@ -52,16 +52,27 @@ fetch(URL)
         teamGridItemChildText.appendChild(title)
 
         const favouriteFood = document.createElement("p")
-        favouriteFood.textContent = `Favourite Food: ${result.favouriteFood}`
-        teamGridItemChildText.appendChild(favouriteFood)
+
+        if (result.favouriteFood != null) {
+            favouriteFood.textContent = `Favourite Food: ${result.favouriteFood}`
+            teamGridItemChildText.appendChild(favouriteFood)
+        }
+        
 
         const favouriteColour = document.createElement("p")
-        favouriteColour.textContent = `Favourite Colour: ${result.favouriteColour}`
-        teamGridItemChildText.appendChild(favouriteColour)
+
+        if (result.favouriteColour != null) {
+            favouriteColour.textContent = `Favourite Colour: ${result.favouriteColour}`
+            teamGridItemChildText.appendChild(favouriteColour)
+        }
+        
 
         const pet = document.createElement("p")
-        pet.textContent = `Pet: ${result.pet}`
-        teamGridItemChildText.appendChild(pet)
+        if (result.favouriteColour != null) {
+            pet.textContent = `Pet: ${result.pet}`
+            teamGridItemChildText.appendChild(pet)
+        }
+        
 
         const content = document.createElement("p")
         content.textContent = result.text
