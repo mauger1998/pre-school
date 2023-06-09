@@ -853,3 +853,26 @@ footer p {
         padding-inline:1rem;
     }
 }
+
+/* new */
+
+.new-hour-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+.new-hour-section {
+    background-color:var(--purple);
+    color:white;
+}
+
+.new-hour-left {
+    width:50%;
+}
+.new-hour-right {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+    width:50%;
+}
