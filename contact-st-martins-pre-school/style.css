@@ -3,7 +3,7 @@
     --heading-one:100px;
     --mobile-heading-one:75px;
     --heading-two:40px;
-    --mobile-heading-twp:25px;
+    --mobile-heading-twp:35px;
     --text:18px;
     --mobile-text:16px;
     --card-heading:22px;
@@ -220,6 +220,9 @@ main .wrapper {
     align-items: flex-end;
     gap:2rem;
 }
+main p {
+    line-height:1.5;
+}
 .main-left {
     width:50%;
 }
@@ -411,7 +414,10 @@ main .wrapper {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:2rem;
+    gap:1rem;
+}
+.doctor-left p {
+    margin-bottom:1rem;
 }
 .doctor-left form {
     display:flex;

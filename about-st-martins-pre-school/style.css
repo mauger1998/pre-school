@@ -3,7 +3,7 @@
     --heading-one:100px;
     --mobile-heading-one:75px;
     --heading-two:40px;
-    --mobile-heading-twp:25px;
+    --mobile-heading-twp:35px;
     --text:18px;
     --mobile-text:16px;
     --card-heading:22px;
@@ -422,6 +422,7 @@ main .wrapper {
 .why-us-section .column p:nth-of-type(1) {
     font-weight:700;
     font-size:var(--card-heading);
+    line-height:1;
 }
 .why-us-section button {
     border:2px solid var(--purple);
