@@ -451,6 +451,7 @@ main .wrapper {
 .doctor-list-item p {
     font-weight:700;
     font-size:var(--card-heading);
+    line-height:1.2;
 }
 .reverse-section .wrapper {
     flex-direction: row-reverse;
@@ -821,7 +822,7 @@ footer .logo {
     align-items: flex-end;
     justify-content: space-between;
     width:100%;
-    border-top:2px solid var(--purple);
+    border-top:1px solid black;
     padding-top:4rem;
 }
 footer a,

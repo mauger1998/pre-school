@@ -563,7 +563,7 @@ footer .logo {
     align-items: flex-end;
     justify-content: space-between;
     width:100%;
-    border-top:2px solid var(--purple);
+    border-top:1px solid black;
     padding-top:4rem;
 }
 footer a,
