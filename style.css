@@ -461,6 +461,9 @@ main .wrapper {
     padding-left:4rem;
     
 }
+.doctor-section button {
+    margin-top:1rem;
+}
 .reverse-section .doctor-list {
     gap:1rem;
 }
