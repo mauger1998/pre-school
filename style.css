@@ -205,6 +205,9 @@ nav ul li {
     }
 }
 
+/* Price Box */
+
+
 /* Main */
 
 main {
@@ -214,16 +217,28 @@ main {
     background-position:center;
 }
 main .wrapper {
-    padding-top:28rem;
+    padding-top:22rem;
     display:flex;
     align-items: flex-end;
     gap:2rem;
+    position:relative;
 }
 .main-left {
     width:50%;
 }
 .main-right {
     width:50%;
+}
+
+.main-left p {
+    font-size:22px;
+    font-weight:500;
+    color:white;
+    background-color:var(--purple);
+    padding:1rem;
+    border-radius:4rem;
+    width:max-content;
+    margin-bottom:0.5rem;
 }
 @media (max-width:1167px) {
     main .wrapper {
@@ -250,6 +265,16 @@ main .wrapper {
     }
     .header-wrapper {
         padding-inline:2rem;
+    }
+    .main-left p {
+        font-size:18px;
+        font-weight:500;
+        color:white;
+        background-color:var(--purple);
+        padding:0.5rem;
+        border-radius:4rem;
+        width:max-content;
+        margin-bottom:0.5rem;
     }
 }
 @media (max-width:600px) {
