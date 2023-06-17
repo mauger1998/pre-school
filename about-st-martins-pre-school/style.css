@@ -651,6 +651,8 @@ footer p {
 }
 .team-grid img {
     width:100%;
+    aspect-ratio:1/1.25;
+    object-fit:cover;
 }
 .team-grid {
     width:100%;
