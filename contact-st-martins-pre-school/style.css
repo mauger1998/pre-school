@@ -568,7 +568,7 @@ footer .logo {
 }
 footer a,
 footer p {
-    color:black;
+    color:#030303;
 }
 .footer-bottom a {
     display:flex;
@@ -579,7 +579,6 @@ footer p {
 footer p {
     font-size:16px;
 }
-
 
 
 
