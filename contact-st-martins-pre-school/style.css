@@ -323,6 +323,7 @@ main p {
     flex-direction: column;
     align-items: flex-start;
     gap:1rem;
+    
 }
 @media (max-width:1167px) {
     .sit-section .wrapper {
