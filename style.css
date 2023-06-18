@@ -606,7 +606,9 @@ main .wrapper {
 html {
     overflow-x:hidden !important;
 }
-
+body {
+    overflow:hidden;
+}
 .puppet-section .wrapper {
     display:flex;
     align-items: center;
