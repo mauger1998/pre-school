@@ -29,3 +29,31 @@ fetch(URL)
   }
 })
 .catch((err) => console.error(err));
+
+// Testimonials CMS
+
+let URLTWO = "https://0pxy7jkz.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20'testimonials'%5D%20%0A%0A"
+
+fetch(URLTWO)
+.then((res) => res.json())
+.then(({ result }) => {
+
+  if (result.length > 0) {
+    const testGrid  = document.querySelector(".trusted-bottom-right")
+    
+    result.forEach((result, index) => {
+      const testCard = document.createElement("div")
+      testCard.classList.add("trusted-card")
+      testGrid.appendChild(testCard)
+
+      const testName = document.createElement("p")
+      testName.textContent = result.name
+      testCard.appendChild(testName)
+      
+      const testBody = document.createElement("p")
+      testBody.textContent = result.text 
+      testCard.appendChild(testBody)
+    })
+  }
+})
+.catch((err) => console.error(err));
