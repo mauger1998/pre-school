@@ -620,3 +620,6 @@ footer p {
         padding-inline:1rem;
     }
 }
+html {
+    overflow-x:hidden;
+}

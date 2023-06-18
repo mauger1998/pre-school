@@ -796,6 +796,12 @@ footer p {
     .term-times-section .wrapper {
         padding-inline:2rem;
     }
+    .term-right img {
+        margin:0;
+        margin-inline:-2rem;
+        width:calc(100% + 4rem);
+        height:calc(100% + 6.2rem);
+    }
 }
 @Media (max-width:500px) {
     .term-times-section .wrapper {
@@ -807,4 +813,14 @@ footer p {
     .term-times-section p {
         font-size:var(--mobile-text);
     }
+    .term-right img {
+        margin:0;
+        margin-inline:-1rem;
+        width:calc(100% + 2rem);
+        height:calc(100% + 6.2rem);
+    }
+}
+
+html {
+    overflow-x:hidden;
 }
