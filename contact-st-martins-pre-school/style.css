@@ -260,6 +260,7 @@ main p {
         padding-top:26rem !important;
     }
 }
+
 @media (max-width:600px) {
     main h1 {
         font-size:var(--mobile-heading-one);
