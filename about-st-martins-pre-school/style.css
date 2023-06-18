@@ -215,7 +215,7 @@ main {
     background-position:center;
 }
 main .wrapper {
-    padding-top:36rem;
+    padding-top:32rem;
     display:flex;
     align-items: flex-end;
     gap:2rem;
@@ -230,7 +230,7 @@ main .wrapper {
     main .wrapper {
         flex-direction: column;
         align-items: flex-start;
-        padding-top:30rem;
+        padding-top:28rem;
     }
     .main-left {
         width:100%;
